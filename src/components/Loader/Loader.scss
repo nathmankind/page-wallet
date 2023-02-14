@@ -1,0 +1,14 @@
+.bar {
+  
+    animation: go-and-come 2.5s ease-in-out infinite;
+  }
+  
+  @keyframes go-and-come {
+    0% {
+      width: 5%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
