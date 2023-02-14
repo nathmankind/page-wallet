@@ -7,6 +7,7 @@ import { Asserts, object, string } from "yup";
 import { TextInput } from "../../components/FormInputs/TextInput";
 import { AuthActions } from "../../zustand/auth.store";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-hot-toast";
 
 export const Login = () => {
   const navigate = useNavigate();
@@ -41,7 +42,8 @@ export const Login = () => {
         });
       },
       onError: (err: any) => {
-        console.log("ERROR", err.response);
+        console.log("ERROR", err);
+        toast.error("An error occured")
       },
     }
   );
